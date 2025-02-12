@@ -56,14 +56,57 @@
     <section class="main-section" id="install">
       <h2>3. Installation and Execution</h2>
     <h3>Prerequisites</h3>
-    <p>Ensure you have Python installed (recommended version: 3.x) and install the Pygame library:</p>
+    <p>Make sure you have Python installed (recommended version: 3.x) and install the Pygame library:</p>
     <pre><code>pip install pygame</code></pre>
     
     <h3>Running the Game</h3>
-    <p>Clone the repository and start the game:</p>
-    <pre><code>git clone &lt;REPO_URL&gt;cd Ironfly python main.py</code></pre>
+    <p>Clone the repository and run the game:</p>
+    <pre><code>git clone https://github.com/alexelricardo02/FlappyBird_EIP_Praktikum.git
+cd FlappyBird_EIP_Praktikum
+python main.py</code></pre>
     </section>
-  
+
+    <section class="main-section" id="arch">
+      <h2>4. Code Architecture</h2>
+    <p>The project is structured in a modular fashion to enhance readability and maintainability. The codebase is organized as follows:</p>
+    <ul>
+        <li><strong>Main Module:</strong> Contains the game loop and overall game state management.</li>
+        <li><strong>Game Entities:</strong> Separate classes and modules for the player (the bird), obstacles, coins, and shooting mechanics.</li>
+        <li><strong>Event Handling:</strong> Dedicated functions for processing user input (mouse clicks or screen taps) and managing game events.</li>
+        <li><strong>Asset Management:</strong> A directory structure to organize graphics, sounds, and other media resources.</li>
+    </ul>
+    <p>This separation of concerns allows for easier maintenance and potential expansion of game features.</p>
+    </section>
+    
+    <section class="main-section" id="development">
+      <h2>5. Development and Technical Challenges</h2>
+    <p>During the development of Ironfly, several technical challenges were addressed:</p>
+    <ul>
+        <li><strong>Timing and Frame Rate:</strong> Optimizing the game loop to ensure smooth gameplay and synchronization of frame rates.</li>
+        <li><strong>Collision Detection:</strong> Implementing accurate collision detection between the bird, obstacles, and coins to maintain a responsive gaming experience.</li>
+        <li><strong>Shooting Mechanic Integration:</strong> Balancing the shooting functionality (enabled after coin collection) with the core gameplay without disrupting the game flow.</li>
+        <li><strong>Asset Integration:</strong> Coordinating the loading and management of visual and audio assets to complement the arcade aesthetic.</li>
+        <li><strong>Time Constraints:</strong> Completing the project within a one-month period required efficient planning, collaboration, and rapid iteration.</li>
+    </ul>
+    </section>
+    
+    <section class="main-section" id="improvements">
+    <h2>6. Future Improvements and Roadmap</h2>
+    <p>There are several ideas for future enhancements to Ironfly:</p>
+    <ul>
+        <li><strong>Additional Levels or Difficulty Modes:</strong> Introducing different stages or difficulty settings to provide long-term engagement.</li>
+        <li><strong>Enhanced Visuals and Animations:</strong> Improving graphics and adding more detailed animations to elevate the overall presentation.</li>
+        <li><strong>New Power-Ups:</strong> Implementing additional power-ups (e.g., temporary invincibility or speed boosts) to diversify gameplay.</li>
+        <li><strong>Online Leaderboards:</strong> Integrating score tracking and online leaderboards to foster competition among players.</li>
+        <li><strong>Code Optimization:</strong> Continuously refactoring and optimizing the codebase to enhance performance and maintainability.</li>
+    </ul>
+    </section>
+
+    <section class="main-section" id="install">
+      <h2>7. Repository</h2>
+      <p>You can find the complete source code on GitHub: <a href="https://github.com/alexelricardo02/FlappyBird_EIP_Praktikum.git" target="_blank">Ironfly Repository</a>.</p>  
+    </section>
+    
 
 </body>
 
