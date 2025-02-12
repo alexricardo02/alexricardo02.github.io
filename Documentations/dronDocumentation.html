@@ -13,18 +13,17 @@
     <nav id="navbar">
       <header >FVP-Drone Documentation</header>
       <ul id="titles">
-        <li><a class="nav-link" href="#getting_started">Introduction</a></li>
-        <li><a class="nav-link" href="#comments">Herramientas y Tecnologías</a></li>
-        <li><a class="nav-link" href="#variables">Arquitectura</a></li>
-        <li><a class="nav-link" href="#data_types">Diseño</a></li>
-        <li><a class="nav-link" href="#strings">Configuración del software</a></li>
-        <li><a class="nav-link" href="#booleans">Desarrollo y pruebas</a></li>
-        <li><a class="nav-link" href="#operators">Ajustes finales y resultados</a></li>
-        <li><a class="nav-link" href="#lists">Dificultades y Soluciones</a></li>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#toAndtech">Tools and Technologies</a></li>
+        <li><a class="nav-link" href="#arch">Architectures</a></li>
+        <li><a class="nav-link" href="#design">Design</a></li>
+        <li><a class="nav-link" href="#softAndConfig">Software Configuration</a></li>
+        <li><a class="nav-link" href="#devAndtest">Development and Testing</a></li>
+        <li><a class="nav-link" href="#results">Results</a></li>
       </ul> 
     </nav>
 
-    <section class="main-section" id="getting_started">
+    <section class="main-section" id="introduction">
 
       <header>Getting Started</header>
       <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
@@ -37,7 +36,7 @@
       <code>Hello, World!</code>
 
     </section>
-    <section class="main-section" id="comments">
+    <section class="main-section" id="toAndtech">
       <header>Comments</header>
       <p>Comments starts with a #, and Python will ignore them:</p>
       <code>#This is a comment </br>print("Hello, World!")</code>
@@ -47,7 +46,7 @@
       <code>"""</br>This is a comment</br>written in</br>more than just one line</br>"""</br>print("Hello, World!")
       </code>
     </section>
-    <section class="main-section" id="variables">
+    <section class="main-section" id="arch">
       <header>Variables</header>
       <p>Variables are containers for storing data values.</p>
       <p>Python has no command for declaring a variable.</p>
@@ -61,7 +60,7 @@
       <header>Get the Type</header>
       <code>x = 5</br>y = "John"</br>print(type(x))</br>print(type(y))</br></code>
     </section>
-    <section class="main-section" id="data_types">
+    <section class="main-section" id="design">
       <header>Data Types</header>
       <p>In programming, data type is an important concept.</br>Variables can store data of different types, and different types can do different things.</br>Python has the following data types built-in by default, in these categories:</br>
     <table>
@@ -99,7 +98,7 @@
       </tr>
     </table>
     </section>
-    <section class="main-section" id="strings">
+    <section class="main-section" id="softAndConfig">
       <header>Strings</header>
       <p>Strings in python are surrounded by either single quotation marks, or double quotation marks.</br>'hello' is the same as "hello".</br>You can display a string literal with the print() function:</br>
       </p>
@@ -109,12 +108,12 @@
       <code>a = "Hello, World!"</br>print(a[1])</code>
 
     </section>
-    <section class="main-section" id="booleans">
+    <section class="main-section" id="devAndtest">
       <header>Booleans</header>
       <p>In programming you often need to know if an expression is True or False.</br>You can evaluate any expression in Python, and get one of two answers, True or False.</br>When you compare two values, the expression is evaluated and Python returns the Boolean answer:
       <code>print(10 > 9)</br>print(10 == 9)</br>print(10 < 9)</br></code>
     </section>
-    <section class="main-section" id="operators">
+    <section class="main-section" id="results">
       <header>Operators</header>
       <p>Operators are used to perform operations on variables and values.</p>
       <p>In the example below, we use the + operator to add together two values:</p>
@@ -162,31 +161,6 @@
           <td>Floor division</td>
         </tr>
       </table>
-    </section>
-    <section class="main-section" id="lists">
-      <header>Lists</header>
-      <p>Lists are used to store multiple items in a single variable.</p>
-      <p>Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</p>
-      <p>Lists are created using square brackets:</p>
-      <code>thislist = ["apple", "banana", "cherry"]</br>print(thislist)</code>
-      <p>List items are ordered, changeable, and allow duplicate values.</p>
-      <p>List items are indexed, the first item has index [0], the second item has index [1] etc.</p>
-    </section>
-    <section class="main-section" id="if_..._else">
-      <header>If ... Else</header>
-      <p>Python supports the usual logical conditions from mathematics:</p>
-      <ul>
-        <li>Equals: a == b</li>
-        <li>Not Equals: a != b</li>
-        <li>Less than: a < b</li>
-        <li>Less than or equal to: a <= b</li>
-        <li>Greater than: a > b</li>
-        <li>Greater than or equal to: a >= b</li>
-      </ul>
-    </section>
-    <section class="main-section" id="for_loops">
-      <header>For Loops</header>
-      <p>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</br>This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.</br>With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
     </section>
 
   </main>
