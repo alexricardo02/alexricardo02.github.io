@@ -20,7 +20,7 @@ html {
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     padding-top: 50px;
 }
 
@@ -54,7 +54,7 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     z-index: 1000;
 }
 
@@ -224,9 +224,16 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: var(--blue);
+    background: rgba(35, 49, 66, 0.7); 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
     gap: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.project-container:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* encabezado/linea superior de cuadro de proyecto*/
@@ -339,6 +346,7 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
 }
 
 #timeline ul {
+    list-style-type: none;
     padding-left: 20px; /* Añade relleno para evitar que los puntos se desborden */
 }
 
@@ -428,7 +436,7 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
 }
 
 i {
-    font-size: 70px;
+    font-size: 1.4rem;
 }
 
 
@@ -514,6 +522,99 @@ display: flex;
 
 
 
+
+/* --- NUEVOS ESTILOS PARA EXPERIENCIA --- */
+
+/* Contenedor del item */
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--green); /* Línea vertical de tiempo */
+    margin-bottom: 40px !important; /* Espacio entre trabajos */
+    margin-left: 10px;
+}
+
+/* El punto verde en la línea de tiempo */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px; /* Ajuste para centrar en la línea */
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--green);
+}
+
+/* Cabecera: Título + Fecha */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.exp-header h3 {
+    margin: 0;
+    color: var(--green);
+    font-size: 1rem; /* Tamaño más grande y legible */
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.exp-date {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.exp-location {
+    color: #a0a0a0;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Lista de tareas (bullets) */
+.exp-bullets {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.exp-bullets li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Badges de tecnologías */
+.exp-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tech-badge {
+    font-size: 0.75rem;
+    background-color: var(--lightblue);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+
+
+
+
 /*cambios en pantallas celulares*/
 @media (max-width: 431px) {
 
@@ -567,6 +668,15 @@ display: flex;
 
     .menu-toggle {
         display: block;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .exp-date {
+        margin-top: 5px;
+        font-size: 0.8rem;
     }
 
     /*/*

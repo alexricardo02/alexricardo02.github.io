@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="dronDocumentation.css">
+  <meta charset="UTF-8">
+  <title>Autonomous Drone Documentation</title>
+  <link rel="stylesheet" href="documentation.css">
 </head>
 
 <body>
@@ -11,154 +12,154 @@
   <main id="main-doc">
 
     <nav id="navbar">
-      <header >FVP-Drone Documentation</header>
+      <header>FVP-Drone Documentation</header>
       <ul id="titles">
         <li><a class="nav-link" href="#introduction">Introduction</a></li>
-        <li><a class="nav-link" href="#toAndtech">Tools and Technologies</a></li>
-        <li><a class="nav-link" href="#arch">Architectures</a></li>
-        <li><a class="nav-link" href="#design">Design</a></li>
-        <li><a class="nav-link" href="#softAndConfig">Software Configuration</a></li>
-        <li><a class="nav-link" href="#devAndtest">Development and Testing</a></li>
-        <li><a class="nav-link" href="#results">Results</a></li>
+        <li><a class="nav-link" href="#toAndtech">Hardware & Technologies</a></li>
+        <li><a class="nav-link" href="#arch">System Architecture</a></li>
+        <li><a class="nav-link" href="#design">Specifications</a></li>
+        <li><a class="nav-link" href="#softAndConfig">ArduPilot Configuration</a></li>
+        <li><a class="nav-link" href="#devAndtest">Flight Testing</a></li>
+        <li><a class="nav-link" href="#results">Results & PID</a></li>
       </ul> 
     </nav>
 
     <section class="main-section" id="introduction">
-
-      <header>Getting Started</header>
-      <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
-      <p>The way to run a python file is like this on the command line:</p>
-      <code>C:\Users\Your Name>python helloworld.py</code>
-      <p>Where "helloworld.py" is the name of your python file.</p>
-      <p>Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
-      <code>print("Hello, World!")</code>
-      <p>The output should read:</p>
-      <code>Hello, World!</code>
-
+      <header>Project Introduction</header>
+      <p>This document details the design, assembly, and programming of a quadcopter Unmanned Aerial Vehicle (UAV), developed using the <strong>ArduPilot</strong> open-source platform.</p>
+      <p>The primary objective of this project is to create a stable platform capable of autonomous GPS navigation and real-time telemetry. The system is built around a Pixhawk flight controller, integrating inertial sensors and global positioning systems.</p>
+      <p>Basic initialization command in the MAVLink console:</p>
+      <code>MAV> arm throttle<br>MAV> takeoff 10</code>
+      <p>The project demonstrates competencies in power electronics, control systems, and embedded firmware configuration.</p>
     </section>
+
     <section class="main-section" id="toAndtech">
-      <header>Comments</header>
-      <p>Comments starts with a #, and Python will ignore them:</p>
-      <code>#This is a comment </br>print("Hello, World!")</code>
-      <p>Comments can be placed at the end of a line, and Python will ignore the rest of the line:</p>
-      <code>print("Hello, World!") #This is a comment</code>
-      <header>Multiline Comments</header>
-      <code>"""</br>This is a comment</br>written in</br>more than just one line</br>"""</br>print("Hello, World!")
+      <header>Core Hardware</header>
+      <p>The core of the system is the Flight Controller (FC), which manages stabilization and navigation. Modular hardware was selected to allow for future expansions.</p>
+      <code><strong>Flight Controller:</strong> Pixhawk 2.4.8 (32-bit ARM Cortex M4)<br><strong>GPS/Compass:</strong> High-precision Ublox M8N Module<br><strong>Radio Control:</strong> FlySky FS-i6X with FS-iA6B receiver (iBUS Protocol)</code>
+      
+      <header>Propulsion System</header>
+      <p>The powertrain is designed to support a medium payload using a 3S LiPo battery.</p>
+      <code>
+      """<br>
+      Motor Specifications (Estimated):<br>
+      Type: Brushless Outrunner<br>
+      KV Rating: 920KV - 2300KV (High Thrust Config)<br>
+      ESCs: 30A with BLHeli_S firmware<br>
+      """<br>
+      Status: PWM range calibration pending.
       </code>
     </section>
-    <section class="main-section" id="arch">
-      <header>Variables</header>
-      <p>Variables are containers for storing data values.</p>
-      <p>Python has no command for declaring a variable.</p>
-      <p>A variable is created the moment you first assign a value to it.</p>
-      <code>x = 5 </br>y = "John"</br>print(x)</br>print(y)</br>
-      </code>
-      <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
-      <header>Casting</header>
-      <p>If you want to specify the data type of a variable, this can be done with casting.</p>
-      <code>x = str(3)    # x will be '3'</br>y = int(3)    # y will be 3</br>z = float(3)  # z will be 3.0</br></code>
-      <header>Get the Type</header>
-      <code>x = 5</br>y = "John"</br>print(type(x))</br>print(type(y))</br></code>
-    </section>
-    <section class="main-section" id="design">
-      <header>Data Types</header>
-      <p>In programming, data type is an important concept.</br>Variables can store data of different types, and different types can do different things.</br>Python has the following data types built-in by default, in these categories:</br>
-    <table>
-      <tr>
-        <td>Text Type:</td>
-        <td>str</td>
-      </tr>
-      <tr>
-        <td>Numeric Types:</td>
-        <td>int, float, complex</td>
-      </tr>
-      <tr>
-        <td>Sequence Types:</td>
-        <td>list, tuple, range</td>
-      </tr>
-      <tr>
-        <td>Mapping Type:</td>
-        <td>dict</td>
-      </tr>
-      <tr>
-        <td>Set Types:</td>
-        <td>set, frozenset</td>
-      </tr>
-      <tr>
-        <td>Boolean Type:</td>
-        <td>bool</td>
-      </tr>
-      <tr>
-        <td>Binary Types:</td>
-        <td>bytes, bytearray, memoryview</td>
-      </tr>
-      <tr>
-        <td>None Type:</td>
-        <td>NoneType</td>
-      </tr>
-    </table>
-    </section>
-    <section class="main-section" id="softAndConfig">
-      <header>Strings</header>
-      <p>Strings in python are surrounded by either single quotation marks, or double quotation marks.</br>'hello' is the same as "hello".</br>You can display a string literal with the print() function:</br>
-      </p>
-      <header>Strings are Arrays</header>
-      <p>Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.</br>However, Python does not have a character data type, a single character is simply a string with a length of 1.</br>Square brackets can be used to access elements of the string.</br>
-      </p>
-      <code>a = "Hello, World!"</br>print(a[1])</code>
 
+    <section class="main-section" id="arch">
+      <header>Connection Architecture</header>
+      <p>The electronic architecture follows a centralized power distribution scheme using a PDB (Power Distribution Board).</p>
+      <p>The main data flow occurs between the RC receiver and the Pixhawk via the RCIN port, while telemetry is managed through UART serial ports.</p>
+      
+      <code>VCC = 11.1V (3S LiPo)<br>Signal = PWM / PPM / iBUS<br>V_Sensor = Active voltage and current monitor</code>
+      
+      <p>Critical sensors (Accelerometer, Gyroscope, Barometer) interact directly with the firmware's EKF (Extended Kalman Filter) to estimate the vehicle's attitude.</p>
+      
+      <header>Port Mapping</header>
+      <p>Physical configuration of the Pixhawk for peripherals:</p>
+      <code>TELEM1: Radio Telemetry (915MHz)<br>TELEM2: OSD / Companion Computer (Raspberry Pi)<br>GPS: M8N Module (Serial + I2C)<br>MAIN OUT 1-4: Signal to ESCs</code>
     </section>
-    <section class="main-section" id="devAndtest">
-      <header>Booleans</header>
-      <p>In programming you often need to know if an expression is True or False.</br>You can evaluate any expression in Python, and get one of two answers, True or False.</br>When you compare two values, the expression is evaluated and Python returns the Boolean answer:
-      <code>print(10 > 9)</br>print(10 == 9)</br>print(10 < 9)</br></code>
-    </section>
-    <section class="main-section" id="results">
-      <header>Operators</header>
-      <p>Operators are used to perform operations on variables and values.</p>
-      <p>In the example below, we use the + operator to add together two values:</p>
-      <ul>
-        <li>Arithmetic operators</li>
-        <li>Assignment operators</li>
-        <li></li>
-        <li>Logical operators</li>
-        <li>Identity operators</li>
-        <li>Membership operators</li>
-        <li>Bitwise operators</li>
-      </ul>
-      <header>Python Arithmetic Operators</header>
+
+    <section class="main-section" id="design">
+      <header>Technical Specifications</header>
+      <p>The following details the calculated and measured technical characteristics of the current prototype. These metrics are fundamental for calculating efficiency and flight time.</p>
       <table>
         <tr>
-          <th>Operator</th>
-          <th>Name</th>
+          <td><strong>Frame Type:</strong></td>
+          <td>F450 / X-Configuration</td>
         </tr>
         <tr>
-          <td>+</td>
-          <td>Addition</td>
+          <td><strong>Take-Off Weight (TOW):</strong></td>
+          <td>~1200g (estimated)</td>
         </tr>
         <tr>
-          <td>-</td>
-          <td>Subtraction</td>
+          <td><strong>Battery:</strong></td>
+          <td>LiPo 3S 2200mAh - 5000mAh</td>
         </tr>
         <tr>
-          <td>*</td>
-          <td>Multiplication</td>
+          <td><strong>Flight Time:</strong></td>
+          <td>10 - 15 minutes (depending on throttle)</td>
         </tr>
         <tr>
-          <td>/</td>
-          <td>Division</td>
+          <td><strong>ESC Protocol:</strong></td>
+          <td>DShot600 / PWM Standard</td>
         </tr>
         <tr>
-          <td>%</td>
-          <td>Modulus</td>
+          <td><strong>Operating Voltage:</strong></td>
+          <td>11.1V - 12.6V</td>
         </tr>
         <tr>
-          <td>**</td>
-          <td>Exponentiation</td>
+          <td><strong>GCS Software:</strong></td>
+          <td>Mission Planner / QGroundControl</td>
         </tr>
         <tr>
-          <td>//</td>
-          <td>Floor division</td>
+          <td><strong>Flight Modes:</strong></td>
+          <td>Stabilize, Loiter, Auto, RTL</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="main-section" id="softAndConfig">
+      <header>Firmware Configuration</header>
+      <p>The system runs on <strong>ArduCopter 4.x</strong>. Initial configuration requires firmware flashing and setting mandatory parameters via Mission Planner.</p>
+      
+      <header>Critical Parameters</header>
+      <p>To ensure safe takeoff, variables in the full parameter tree have been modified. It is vital to configure the battery and radio "Failsafe".</p>
+      <code>ARMING_CHECK = 1 (Enables all safety checks)<br>FLTMODE1 = Stabilize<br>BATT_MONITOR = 4</code>
+      <p>Accelerometer calibration requires placing the drone in 6 different positions to register MEMS sensor offsets.</p>
+    </section>
+
+    <section class="main-section" id="devAndtest">
+      <header>Development Challenges</header>
+      <p>During the integration phase, the biggest challenge has been calibrating the internal and external compass due to electromagnetic interference (EMI) generated by high-current ESC cables.</p>
+      <p>Work is currently underway on tuning the PID control loops to improve stability:</p>
+      <code>P (Proportional): Immediate reaction to error.<br>I (Integral): Correction of accumulated long-term error.<br>D (Derivative): Dampening of future oscillations.</code>
+      <p>The drone exhibits minor oscillations in the "Roll" axis during aggressive maneuvers, indicating a 'P' value that is too high or insufficient 'D'.</p>
+    </section>
+
+    <section class="main-section" id="results">
+      <header>Current Status & Results</header>
+      <p>The drone has performed successful takeoffs in "Stabilize" mode. The GPS system achieves a "3D Fix" with over 12 satellites, enabling assisted modes.</p>
+      <p>List of pending tasks for optimization:</p>
+      <ul>
+        <li>PID Gain fine-tuning (AutoTune).</li>
+        <li>Dynamic propeller balancing to reduce vibrations.</li>
+        <li>Geo-Fence configuration.</li>
+        <li>MavLink telemetry implementation.</li>
+        <li>"Return to Launch" (RTL) testing.</li>
+        <li>Integration of a camera with a 2-axis Gimbal.</li>
+      </ul>
+      
+      <header>Flight Metrics (Log Analysis)</header>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Vibration (VibeX/Y)</td>
+          <td>Acceptable (< 15 m/s/s)</td>
+        </tr>
+        <tr>
+          <td>Motor Output</td>
+          <td>Balanced (PWM avg 1500)</td>
+        </tr>
+        <tr>
+          <td>GPS HDOP</td>
+          <td>< 1.2 (Excellent precision)</td>
+        </tr>
+        <tr>
+          <td>Pixhawk Temp</td>
+          <td>45°C (Nominal)</td>
+        </tr>
+        <tr>
+          <td>Voltage Sag</td>
+          <td>0.5V at Full Throttle</td>
         </tr>
       </table>
     </section>

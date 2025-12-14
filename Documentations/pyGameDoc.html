@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="dronDocumentation.css">
+  <meta charset="UTF-8">
+  <title>Flappy Iron Man Documentation</title>
+  <link rel="stylesheet" href="documentation.css">
 </head>
 
 <body>
@@ -11,102 +12,126 @@
   <main id="main-doc">
 
     <nav id="navbar">
-      <header>Ironfly - Project Documentation</header>
+      <header>Flappy Iron Man Docs</header>
       <ul id="titles">
-        <li><a class="nav-link" href="#introduction">Introduction</a></li>
-        <li><a class="nav-link" href="#main">Main features</a></li>
-        <li><a class="nav-link" href="#install">Installation and execution</a></li>
-        <li><a class="nav-link" href="#arch">Code architecture</a></li>
-        <li><a class="nav-link" href="#development">Development and technical challenges</a></li>
-        <li><a class="nav-link" href="#improvements">Future improvements and roadmap</a></li>
-        <li><a class="nav-link" href="#credits">Credits and collaborators</a></li>
-        <li><a class="nav-link" href="#repository">Repository and demonstration</a></li>
+        <li><a class="nav-link" href="#introduction">Project Overview</a></li>
+        <li><a class="nav-link" href="#toAndtech">Tech Stack & Libs</a></li>
+        <li><a class="nav-link" href="#arch">Software Architecture</a></li>
+        <li><a class="nav-link" href="#design">Game Mechanics</a></li>
+        <li><a class="nav-link" href="#softAndConfig">Setup & Configuration</a></li>
+        <li><a class="nav-link" href="#devAndtest">Logic & Algorithms</a></li>
+        <li><a class="nav-link" href="#results">Results & Awards</a></li>
       </ul> 
     </nav>
 
     <section class="main-section" id="introduction">
-      <h2>1. Introduction</h2>
-      <p><strong>Ironfly</strong> is a game developed with Pygame, inspired by <em>Flappy Bird</em>, but with an additional mechanic: the player can shoot after collecting coins. It is a <strong>single-player</strong> game where the goal is to score as many points as possible by avoiding obstacles and destroying walls.</p>
-      <p>This project was developed as part of a university computer science practice in <strong>September 2022</strong>. The team consisted of <strong>three members: David, Adam, and myself</strong>.</p>
+      <header>Introduction & Achievements</header>
+      <p><strong>Flappy Iron Man</strong> is an advanced reinterpretation of the classic arcade genre, developed in Python utilizing the Pygame engine. This project extends beyond basic physics and collision mechanics by introducing an offensive combat system and dynamic environment destruction.</p>
+      <p>The project was collaboratively developed by a team consisting of "aserrajjj", "susda", and myself. Following a technical evaluation and gameplay showcase, this software was awarded:</p>
+      <code>🏆 1st PLACE - University Development Competition<br>(Selected among 24 participating teams)</code>
+      <p>The game features a stable 60 FPS runtime, integrated video playback, and a progressive difficulty algorithm.</p>
     </section>
-    
-    <section class="main-section" id="main">
-      <h2>2. Main Features</h2>
-      <ul>
-          <li><strong>Genre:</strong> Arcade</li>
-          <li><strong>Game Mode:</strong> Single player</li>
-          <li><strong>Objective:</strong> Earn the highest score by dodging obstacles and shooting when possible.</li>
-          <li><strong>Core Mechanics:</strong>
-              <ul>
-                  <li>The player jumps by clicking or tapping the screen.</li>
-                  <li>Coins can be collected to enable shooting and destroying walls.</li>
-              </ul>
-          </li>
-          <li><strong>Visual Style:</strong> Arcade, futuristic design.</li>
-          <li><strong>Sound:</strong>
-              <ul>
-                  <li>Arcade-style background music.</li>
-                  <li>Sound effects for jumping and wall destruction.</li>
-              </ul>
-          </li>
-      </ul>
-    </section>
-    
-    
-    <section class="main-section" id="install">
-      <h2>3. Installation and Execution</h2>
-    <h3>Prerequisites</h3>
-    <p>Make sure you have Python installed (recommended version: 3.x) and install the Pygame library:</p>
-    <pre><code>pip install pygame</code></pre>
-    
-    <h3>Running the Game</h3>
-    <p>Clone the repository and run the game:</p>
-    <pre><code>git clone https://github.com/alexelricardo02/FlappyBird_EIP_Praktikum.git
-cd FlappyBird_EIP_Praktikum
-python main.py</code></pre>
+
+    <section class="main-section" id="toAndtech">
+      <header>Technology Stack</header>
+      <p>The graphics engine core is built on <strong>Pygame</strong>, implementing an optimized Game Loop to handle event listeners, state updates, and real-time rendering.</p>
+      <p>Key libraries imported in <code>main.py</code>:</p>
+      <code>import pygame  # Graphics and Audio Engine<br>import os      # Asset Path Management<br>import random  # Procedural Level Generation<br>from files.pyvidplayer import Video # Custom Video Codec</code>
+      
+      <header>Programming Paradigm</header>
+      <p>A strict <strong>Object-Oriented Programming (OOP)</strong> approach was utilized. Every game entity is an independent class inheriting from <code>pygame.sprite.Sprite</code>, ensuring code scalability and maintainability.</p>
     </section>
 
     <section class="main-section" id="arch">
-      <h2>4. Code Architecture</h2>
-    <p>The project is structured in a modular fashion to enhance readability and maintainability. The codebase is organized as follows:</p>
-    <ul>
-        <li><strong>Main Module:</strong> Contains the game loop and overall game state management.</li>
-        <li><strong>Game Entities:</strong> Separate classes and modules for the player (the bird), obstacles, coins, and shooting mechanics.</li>
-        <li><strong>Event Handling:</strong> Dedicated functions for processing user input (mouse clicks or screen taps) and managing game events.</li>
-        <li><strong>Asset Management:</strong> A directory structure to organize graphics, sounds, and other media resources.</li>
-    </ul>
-    <p>This separation of concerns allows for easier maintenance and potential expansion of game features.</p>
-    </section>
-    
-    <section class="main-section" id="development">
-      <h2>5. Development and Technical Challenges</h2>
-    <p>During the development of Ironfly, several technical challenges were addressed:</p>
-    <ul>
-        <li><strong>Timing and Frame Rate:</strong> Optimizing the game loop to ensure smooth gameplay and synchronization of frame rates.</li>
-        <li><strong>Collision Detection:</strong> Implementing accurate collision detection between the bird, obstacles, and coins to maintain a responsive gaming experience.</li>
-        <li><strong>Shooting Mechanic Integration:</strong> Balancing the shooting functionality (enabled after coin collection) with the core gameplay without disrupting the game flow.</li>
-        <li><strong>Asset Integration:</strong> Coordinating the loading and management of visual and audio assets to complement the arcade aesthetic.</li>
-        <li><strong>Time Constraints:</strong> Completing the project within a one-month period required efficient planning, collaboration, and rapid iteration.</li>
-    </ul>
-    </section>
-    
-    <section class="main-section" id="improvements">
-    <h2>6. Future Improvements and Roadmap</h2>
-    <p>There are several ideas for future enhancements to Ironfly:</p>
-    <ul>
-        <li><strong>Additional Levels or Difficulty Modes:</strong> Introducing different stages or difficulty settings to provide long-term engagement.</li>
-        <li><strong>Enhanced Visuals and Animations:</strong> Improving graphics and adding more detailed animations to elevate the overall presentation.</li>
-        <li><strong>New Power-Ups:</strong> Implementing additional power-ups (e.g., temporary invincibility or speed boosts) to diversify gameplay.</li>
-        <li><strong>Online Leaderboards:</strong> Integrating score tracking and online leaderboards to foster competition among players.</li>
-        <li><strong>Code Optimization:</strong> Continuously refactoring and optimizing the codebase to enhance performance and maintainability.</li>
-    </ul>
+      <header>Project Architecture</header>
+      <p>The file structure is modularized to separate game logic, assets, and class definitions. The entry point is <code>main.py</code>, which orchestrates the following modules:</p>
+      
+      <code><strong>/files/character_class.py:</strong> Player Physics (Iron Man).<br><strong>/files/wand_class.py:</strong> Obstacle Generation (Walls).<br><strong>/files/buttons_class.py:</strong> User Interface (UI).<br><strong>/files/score.py:</strong> Score Management & Persistence.</code>
+      
+      <p>The system uses "Sprite Groups" for efficient collision handling and batch rendering within the <code>draw_window()</code> function.</p>
     </section>
 
-    <section class="main-section" id="install">
-      <h2>7. Repository</h2>
-      <p>You can find the complete source code on GitHub: <a href="https://github.com/alexelricardo02/FlappyBird_EIP_Praktikum.git" target="_blank">Ironfly Repository</a>.</p>  
+    <section class="main-section" id="design">
+      <header>Mechanics & Design</header>
+      <p>Unlike the original game, <strong>Flappy Iron Man</strong> introduces strategic offensive mechanics. The player must balance evasion with environment interaction.</p>
+      <table>
+        <tr>
+          <td><strong>Character:</strong></td>
+          <td>Iron Man (Simulated Gravity Flight)</td>
+        </tr>
+        <tr>
+          <td><strong>Resource (Coins):</strong></td>
+          <td>Converted into Ammunition upon collection.</td>
+        </tr>
+        <tr>
+          <td><strong>Combat System:</strong></td>
+          <td>Repulsor shots to destroy obstacles.</td>
+        </tr>
+        <tr>
+          <td><strong>Durability:</strong></td>
+          <td>Walls require 2 hits to break.</td>
+        </tr>
+        <tr>
+          <td><strong>Resolution:</strong></td>
+          <td>1200 x 600 px</td>
+        </tr>
+      </table>
+      <p>This duality (Dodge vs. Destroy) adds a layer of strategic depth that was decisive in securing the competition victory.</p>
     </section>
-    
+
+    <section class="main-section" id="softAndConfig">
+      <header>Installation & Assets</header>
+      <p>The project requires Python 3.x and dependency installation. Media resources (images and sounds) are managed via relative paths using <code>os.path.join</code> to ensure cross-platform compatibility (Windows/Linux).</p>
+      
+      <code>pip install pygame<br>python main.py</code>
+      
+      <header>Initialization</header>
+      <p>Upon execution, the main script instances the window and the Audio Mixer for background music and Sound Effects (SFX):</p>
+      <code>mixer.Sound(os.path.join('Assets/sounds', 'GameSongArcade4.mp3'))<br>WIN = pygame.display.set_mode((WIDTH,HIGHT))<br>pygame.display.set_caption("Flappy Iron Man")</code>
+    </section>
+
+    <section class="main-section" id="devAndtest">
+      <header>Key Algorithms</header>
+      <p>A major challenge was the <strong>Progressive Difficulty Algorithm</strong>. The spawn frequency of walls increases mathematically based on the player's current score.</p>
+      <code># Obstacle Generation Formula<br>if time() - Begin_time > ((1.2) - (0.025 * variables.score)):<br>    add_walls()<br>    # Higher score = Lower time between walls</code>
+      
+      <header>Collision Detection</header>
+      <p>Pixel-perfect (or AABB) collision detection was implemented using the <code>spritecollide</code> method. This manages both defeat conditions (crashing into a wall) and resource gathering (collecting coins).</p>
+      <code>if pygame.sprite.spritecollide(character, variables.coins_sprite, True):<br>    coin_sound.play()<br>    variables.laser_shots += 1 # Reload Ammo</code>
+    </section>
+
+    <section class="main-section" id="results">
+      <header>Project Results</header>
+      <p>The final software is robust and free of memory leaks thanks to correct sprite disposal (<code>.kill()</code> method) when objects leave the screen. The integration of an intro video via <code>pyvidplayer</code> adds high production value.</p>
+      
+      <ul>
+        <li><strong>Performance:</strong> Stable 60 FPS on mid-range hardware.</li>
+        <li><strong>Stability:</strong> Exception handling for file loading.</li>
+        <li><strong>Visual Feedback:</strong> UI System for Score, Shots, and Game Over.</li>
+      </ul>
+      
+      <header>Recognition</header>
+      <table>
+        <tr>
+          <th>Achievement</th>
+          <th>Detail</th>
+        </tr>
+        <tr>
+          <td>Position</td>
+          <td>1st Place (Winner)</td>
+        </tr>
+        <tr>
+          <td>Competition</td>
+          <td>24 University Teams</td>
+        </tr>
+        <tr>
+          <td>Team</td>
+          <td>Myself, aserrajjj, susda</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
 
 </body>
 

@@ -1,0 +1,246 @@
+/* Importamos una fuente moderna y legible de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400&display=swap');
+
+:root {
+  /* Paleta de colores técnica */
+  --sidebar-bg: #1a202c;       /* Gris muy oscuro / Azul noche */
+  --sidebar-text: #e2e8f0;     /* Blanco suave */
+  --accent-color: #3b82f6;     /* Azul eléctrico "Tech" */
+  --main-bg: #ffffff;          /* Fondo principal */
+  --text-color: #2d3748;       /* Gris oscuro para lectura */
+  --code-bg: #2d3748;          /* Fondo para bloques de código */
+  --code-text: #a0aec0;        /* Texto de código */
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-bg);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* --- BARRA LATERAL (NAVBAR) --- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--accent-color);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#titles {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#navbar a.nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--sidebar-text);
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+#navbar a.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--accent-color);
+  color: #fff;
+  padding-left: 2.5rem; /* Efecto de desplazamiento */
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+#main-doc {
+  margin-left: 300px; /* Mismo ancho que el navbar */
+  padding: 4rem 6rem;
+  width: 100%;
+  max-width: 1200px; /* Evita que el texto se estire demasiado en pantallas grandes */
+}
+
+/* --- SECCIONES --- */
+.main-section {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.main-section header {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Pequeña línea decorativa bajo los títulos de sección */
+.main-section header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: #4a5568;
+}
+
+ul {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- BLOQUES DE CÓDIGO (ESTILO TERMINAL) --- */
+code {
+  display: block;
+  background-color: #1e293b; /* Fondo oscuro estilo terminal */
+  color: #63b3ed;            /* Azul claro para el texto */
+  font-family: 'Fira Code', monospace; /* Fuente monoespaciada */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  white-space: pre-wrap;     /* Mantiene los saltos de línea */
+  font-size: 0.9rem;
+  border-left: 5px solid var(--accent-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para notas o comentarios dentro del código (si los hubiera manuales) */
+code strong {
+  color: #f6ad55; /* Naranja para resaltar claves */
+}
+
+/* --- TABLAS DE DATOS --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+tr:hover {
+  background-color: #ebf8ff;
+}
+
+/* --- RESPONSIVE DESIGN (MÓVIL) --- */
+@media (max-width: 850px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+  #navbar header {
+    padding: 1.5rem;
+  }
+
+  #titles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  
+  #titles li {
+    margin: 0;
+  }
+
+  #navbar a.nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  #navbar a.nav-link:hover {
+    padding-left: 1rem;
+    border-bottom-color: var(--accent-color);
+    background: transparent;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+  }
+  
+  code {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
