@@ -435,8 +435,12 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
     padding: 15px;
 }
 
-i {
+.exp-location i {
     font-size: 1.4rem;
+}
+
+i {
+    font-size: 70px;
 }
 
 
