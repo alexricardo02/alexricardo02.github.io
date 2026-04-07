@@ -155,7 +155,8 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8); /* Opcional: agrega sombra */
     margin-bottom: 20px;
     object-position: top center;
-  }
+}
+
 
 .sector-title {
     display: flex;
@@ -630,7 +631,16 @@ display: flex;
     border: 1px solid rgba(255,255,255,0.2);
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
