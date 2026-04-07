@@ -228,12 +228,17 @@ ul, p, h1, h2, h3, h4, span, i, svg, b {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
     gap: 20px;
     backdrop-filter: blur(10px);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    
+    /* MEJORA: Aceleración por hardware y tiempos más fluidos */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform, box-shadow; /* Delega la carga a la GPU */
 }
 
 .project-container:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    /* MEJORA: translate3d en lugar de translateY activa la GPU */
+    transform: translate3d(0, -8px, 0); 
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* encabezado/linea superior de cuadro de proyecto*/
