@@ -14,19 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Error: No se encontraron el botón o el menú en el DOM.');
     }
+
+    // ===== SCROLL REVEAL =====
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target); // solo anima una vez
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
 });
 
 
-// ===== SCROLL REVEAL =====
-const revealElements = document.querySelectorAll('.reveal');
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target); // solo anima una vez
-    }
-  });
-}, { threshold: 0.15 });
-
-revealElements.forEach(el => revealObserver.observe(el));
