@@ -1,16 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle'); // Botón del menú
-    const navText = document.querySelector('#nav-text'); // Menú
-    const mediaQuery = window.matchMedia("(max-width: 431px)"); // Media query para pantallas pequeñas
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navText = document.querySelector('#nav-text');
+    const mediaQuery = window.matchMedia("(max-width: 431px)"); 
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const extraProjects = document.querySelectorAll('.extra-project');
 
     const toggleMenu = () => {
         if (mediaQuery.matches) {
-            navText.classList.toggle('active'); // Alterna la clase
+            navText.classList.toggle('active');
         }
     };
 
     if (menuToggle && navText) {
-        menuToggle.addEventListener('click', toggleMenu); // Agrega el evento de clic
+        menuToggle.addEventListener('click', toggleMenu);
     } else {
         console.error('Error: No se encontraron el botón o el menú en el DOM.');
     }
@@ -22,12 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target); // solo anima una vez
+                revealObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.15 });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    if(loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            extraProjects.forEach(project => {
+                project.style.display = 'flex';
+                setTimeout(() => project.classList.add('visible'), 50); 
+            });
+            loadMoreBtn.style.display = 'none'; 
+        });
+    }
 });
 
 
