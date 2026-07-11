@@ -828,10 +828,6 @@ i {
         font-size: 10px;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
     .exp-header {
         flex-direction: column;
         align-items: flex-start;

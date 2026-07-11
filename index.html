@@ -1,492 +1,676 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Alex Brinckmann Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Alex Brinckmann — Portfolio</title>
     <script src="copiarCorreo.js"></script>
-    <script src="./menu.js"></script>
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header id="header">
-        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-        <nav id="nav-bar">
-            <ul id="nav-text">
-                <li><a href="#presentation">Home</a></li>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#technologies">Technologies</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav id="nav-bar">
+        <ul id="nav-text">
+          <li><a href="#presentation">Home</a></li>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#technologies">Technologies</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div id="content">
+      <!-- PRESENTATION -->
+      <section id="presentation" class="section">
+        <div id="name-text" class="reveal">
+          <h2 id="surname">Alex</h2>
+          <h2 id="name">Brinckmann</h2>
+        </div>
 
-        <!-- PRESENTATION -->
-        <section id="presentation" class="section">
-            <div id="name-text" class="reveal">
-                <h2 id="surname">Alex</h2>
-                <h2 id="name">Brinckmann</h2>
-            </div>
+        <div id="short-description">
+          <p>
+            <i id="personal-description"
+              >Data Analyst &amp; Software developer</i
+            >
+          </p>
+        </div>
 
-            <div id="short-description">
-                <p><i id="personal-description">Data Analyst &amp; Software developer</i></p>
-            </div>
+        <div id="cuadro-de-disponibilidad">
+          <div id="punto"></div>
+          <p>Available for work</p>
+        </div>
 
-            <div id="cuadro-de-disponibilidad">
-                <div id="punto"></div>
-                <p>Available for work</p>
-            </div>
+        <div id="github-linkedin">
+          <a
+            href="https://github.com/alexricardo02"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="devicon-github-original"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alex-brinckmann-6762b6203/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+        </div>
+      </section>
 
-            <div id="github-linkedin">
-                <a href="https://github.com/alexricardo02" target="_blank" title="GitHub">
-                    <i class="devicon-github-original"></i>
+      <!-- ABOUT ME -->
+      <section id="about-me" class="section">
+        <div class="sector-title">
+          <div class="line"></div>
+          <h2>About me</h2>
+          <div class="line"></div>
+        </div>
+
+        <div id="contenedor-texto-about-me" class="reveal">
+          <img id="profile-picture" src="./profile.jpg" alt="Alex Brinckmann" />
+          <div id="about-me-text">
+            <p>
+              I am a data analyst and software developer with a creative yet
+              structured mindset, passionate about bridging the gap between data
+              insights, software engineering, and robotics. My technical
+              expertise spans data analytics, application development, and
+              hardware-software integration, backed by hands-on experience with
+              Python, SQL, and Power BI.
+            </p>
+            <br />
+            <p>
+              As a native Spanish speaker with C1 German and C1 English, I
+              communicate and collaborate effectively in multicultural
+              environments, bringing a versatile, multi-disciplinary approach to
+              every project.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNOLOGIES -->
+      <section id="technologies" class="section">
+        <div class="sector-title">
+          <div class="line"></div>
+          <h2>Technologies</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="sector-title">
+          <h4>Languages &amp; Frontend</h4>
+        </div>
+        <div class="technologies-grid">
+          <div class="technology-container" title="Python">
+            <i class="devicon-python-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="Java">
+            <i class="devicon-java-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="JavaScript">
+            <i class="devicon-javascript-plain technology-icon"></i>
+          </div>
+          <div class="technology-container" title="HTML5">
+            <i class="devicon-html5-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="CSS3">
+            <img
+              src="https://img.icons8.com/?size=100&id=11594&format=png&color=000000"
+              alt="CSS3"
+              id="excel-icon"
+              width="50"
+              height="50"
+            />
+          </div>
+        </div>
+
+        <div class="sector-title">
+          <h4>Backend &amp; Databases</h4>
+        </div>
+        <div class="technologies-grid">
+          <div class="technology-container" title="Spring Boot">
+            <i class="devicon-spring-original-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="Hibernate">
+            <i class="devicon-hibernate-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="PostgreSQL">
+            <i class="devicon-postgresql-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="MySQL">
+            <i class="devicon-mysql-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="MongoDB">
+            <i class="devicon-mongodb-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="Redis">
+            <i class="devicon-redis-plain-wordmark technology-icon"></i>
+          </div>
+        </div>
+
+        <div class="sector-title">
+          <h4>Tools &amp; Analytics</h4>
+        </div>
+        <div class="technologies-grid">
+          <div class="technology-container" title="Git">
+            <i class="devicon-git-plain-wordmark technology-icon"></i>
+          </div>
+          <div class="technology-container" title="Excel">
+            <img
+              src="https://img.icons8.com/?size=100&id=11594&format=png&color=000000"
+              alt="Excel"
+              id="excel-icon"
+              width="50"
+              height="50"
+            />
+          </div>
+          <div class="technology-container" title="Power BI">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              style="fill: #1a1a2e"
+              id="powerbi-icon"
+            >
+              <path
+                d="M 27.5 1 C 26.122 1 25 2.122 25 3.5 L 25 10 L 31.5 10 C 33.981 10 36 12.019 36 14.5 L 36 49 L 40.5 49 C 41.878 49 43 47.879 43 46.5 L 43 3.5 C 43 2.122 41.878 1 40.5 1 L 27.5 1 z M 18.5 12 C 17.122 12 16 13.122 16 14.5 L 16 20 L 22.5 20 C 24.981 20 27 22.019 27 24.5 L 27 49 L 31.5 49 C 32.878 49 34 47.879 34 46.5 L 34 14.5 C 34 13.122 32.878 12 31.5 12 L 18.5 12 z M 9.5 22 C 8.122 22 7 23.122 7 24.5 L 7 46.5 C 7 47.879 8.122 49 9.5 49 L 22.5 49 C 23.878 49 25 47.879 25 46.5 L 25 24.5 C 25 23.122 23.878 22 22.5 22 L 9.5 22 z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="sector-title">
+          <div class="line"></div>
+          <h2>Selected Projects</h2>
+          <div class="line"></div>
+        </div>
+
+        <div id="projects-grid">
+          <!-- Project 1: Finance Tracker App (REPLACED) -->
+          <div class="project-container reveal" id="project1-container">
+            <div class="project-header">
+              <ul>
+                <li class="proyect-language wip-badge">In Progress</li>
+                <li class="proyect-language">Spring Boot</li>
+                <li class="proyect-language">PostgreSQL</li>
+                <li class="proyect-language">Redis</li>
+              </ul>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/alexricardo02/finance-tracker-backend.git"
+                  target="_blank"
+                  class="btn-icon"
+                  title="View Code"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/alex-brinckmann-6762b6203/" target="_blank" title="LinkedIn">
-                    <i class="devicon-linkedin-plain"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <h3>Finance Tracker App</h3>
+              <p class="project-description-text">
+                A production-grade REST API for personal finance tracking
+                engineered with Spring Boot and PostgreSQL to master advanced
+                system design. Designed for enterprise reliability, it features
+                JWT with rotating refresh tokens, Redis-backed caching, Bucket4j
+                rate limiting, RabbitMQ async recalculation, and Resilience4j
+                circuit breakers.
+              </p>
+            </div>
+            <div class="project-fotos">
+              <img
+                class="single-project-foto"
+                src="./finance-tracker.png"
+                alt="Finance Tracker App"
+                id="finance-foto"
+              />
+            </div>
+          </div>
+
+          <!-- Project 2: DIY Drone -->
+          <div class="project-container reveal" id="project2-container">
+            <div class="project-header">
+              <ul>
+                <li class="proyect-language wip-badge">In Progress</li>
+                <li class="proyect-language">Mission Planner</li>
+                <li class="proyect-language">Electronics</li>
+              </ul>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/alexricardo02/DIY-Drone-Project.git"
+                  target="_blank"
+                  class="btn-icon"
+                  title="View Code"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
                 </a>
+              </div>
             </div>
-        </section>
-
-        <!-- ABOUT ME -->
-        <section id="about-me" class="section">
-            <div class="sector-title">
-                <div class="line"></div>
-                <h2>About me</h2>
-                <div class="line"></div>
+            <div class="project-description">
+              <h3>DIY-Drone</h3>
+              <p class="project-description-text">
+                Developing an autonomous FPV-hybrid UAV built on a carbon fiber
+                racing chassis using a Pixhawk controller and ArduPilot.
+                Currently optimizing flight stability through custom PID tuning
+                and log analysis, with real-time telemetry and Raspberry Pi
+                companion computer integration in progress.
+              </p>
             </div>
-
-            <div id="contenedor-texto-about-me" class="reveal">
-                <img id="profile-picture" src="./profile.jpg" alt="Alex Brinckmann">
-                <div id="about-me-text">
-                    <p>I am a data analyst and software developer with a creative yet structured mindset, passionate about bridging the gap between data insights, software engineering, and robotics. My technical expertise spans data analytics, application development, and hardware-software integration, backed by hands-on experience with Python, SQL, and Power BI.
-                    </p>
-                    <br>
-                    <p>As a native Spanish speaker with C1 German and C1 English, I communicate and collaborate effectively in multicultural environments, bringing a versatile, multi-disciplinary approach to every project.
-                    </p>
-                </div>
+            <div class="project-fotos">
+              <img
+                class="single-project-foto"
+                src="./dron.png"
+                alt="DIY Drone"
+                id="dron-foto"
+              />
             </div>
-        </section>
+          </div>
 
-        <!-- TECHNOLOGIES -->
-        <section id="technologies" class="section">
-            <div class="sector-title">
-                <div class="line"></div>
-                <h2>Technologies</h2>
-                <div class="line"></div>
+          <!-- Project 3: Criminal Statistics -->
+          <div class="project-container reveal" id="project3-container">
+            <div class="project-header">
+              <ul>
+                <li class="proyect-language">PHP</li>
+                <li class="proyect-language">MySQL</li>
+                <li class="proyect-language">JS</li>
+              </ul>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/alexricardo02/webtechnologien-pm-a-team-9.git"
+                  target="_blank"
+                  class="btn-icon"
+                  title="View Code"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
-
-            <div class="sector-title">
-                <h4>Languages &amp; Frontend</h4>
+            <div class="project-description">
+              <h3>Criminal Statistics Web Dashboard</h3>
+              <p class="project-description-text">
+                Collaborative SCRUM project featuring interactive data
+                visualization with a robust real-time MySQL database
+                architecture, seamlessly integrated with an interactive backend
+                for processing large datasets efficiently.
+              </p>
             </div>
-            <div class="technologies-grid">
-                <div class="technology-container" title="Python">
-                    <i class="devicon-python-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="Java">
-                    <i class="devicon-java-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="JavaScript">
-                    <i class="devicon-javascript-plain technology-icon"></i>
-                </div>
-                <div class="technology-container" title="HTML5">
-                    <i class="devicon-html5-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="CSS3">
-                    <img src="https://img.icons8.com/?size=100&id=11594&format=png&color=000000" alt="CSS3"
-                        id="excel-icon" width="50" height="50">
-                </div>
+            <div class="project-fotos">
+              <img
+                class="single-project-foto"
+                src="./dashboard.png"
+                alt="Criminal Statistics Dashboard"
+                id="accident-foto"
+              />
             </div>
+          </div>
 
-            <div class="sector-title">
-                <h4>Backend &amp; Databases</h4>
+          <!-- Project 4: Iron Fly -->
+          <div class="project-container reveal" id="project4-container">
+            <div class="project-header">
+              <ul>
+                <li class="proyect-language">Python</li>
+                <li class="proyect-language">Git</li>
+              </ul>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/alexricardo02/Iron-Fly-Game.git"
+                  target="_blank"
+                  class="btn-icon"
+                  title="View Code"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="technologies-grid">
-                <div class="technology-container" title="Spring Boot">
-                    <i class="devicon-spring-original-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="Hibernate">
-                    <i class="devicon-hibernate-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="PostgreSQL">
-                    <i class="devicon-postgresql-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="MySQL">
-                    <i class="devicon-mysql-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="MongoDB">
-                    <i class="devicon-mongodb-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="Redis">
-                    <i class="devicon-redis-plain-wordmark technology-icon"></i>
-                </div>
+            <div class="project-description">
+              <h3>Iron-Fly 2D Game</h3>
+              <p class="project-description-text">
+                Awarded 1st place out of 24 projects at JGU Mainz. Built with
+                Python and PyGame, applying OOP principles to engineer complex
+                game logic, physics, and graphical interfaces.
+              </p>
             </div>
-
-            <div class="sector-title">
-                <h4>Tools &amp; Analytics</h4>
+            <div class="project-fotos">
+              <img
+                class="single-project-foto"
+                src="./ironfly1.png"
+                alt="Iron Fly Game"
+                id="game-foto"
+              />
             </div>
-            <div class="technologies-grid">
-                <div class="technology-container" title="Git">
-                    <i class="devicon-git-plain-wordmark technology-icon"></i>
-                </div>
-                <div class="technology-container" title="Excel">
-                    <img src="https://img.icons8.com/?size=100&id=11594&format=png&color=000000" alt="Excel"
-                        id="excel-icon" width="50" height="50">
-                </div>
-                <div class="technology-container" title="Power BI">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"
-                        style="fill:#1a1a2e;" id="powerbi-icon">
-                        <path
-                            d="M 27.5 1 C 26.122 1 25 2.122 25 3.5 L 25 10 L 31.5 10 C 33.981 10 36 12.019 36 14.5 L 36 49 L 40.5 49 C 41.878 49 43 47.879 43 46.5 L 43 3.5 C 43 2.122 41.878 1 40.5 1 L 27.5 1 z M 18.5 12 C 17.122 12 16 13.122 16 14.5 L 16 20 L 22.5 20 C 24.981 20 27 22.019 27 24.5 L 27 49 L 31.5 49 C 32.878 49 34 47.879 34 46.5 L 34 14.5 C 34 13.122 32.878 12 31.5 12 L 18.5 12 z M 9.5 22 C 8.122 22 7 23.122 7 24.5 L 7 46.5 C 7 47.879 8.122 49 9.5 49 L 22.5 49 C 23.878 49 25 47.879 25 46.5 L 25 24.5 C 25 23.122 23.878 22 22.5 22 L 9.5 22 z">
-                        </path>
-                    </svg>
-                </div>
+          </div>
+
+          <div
+            class="project-container reveal extra-project"
+            id="gloo-container"
+            style="display: none"
+          >
+            <div class="project-header">
+              <ul>
+                <li class="proyect-language wip-badge">In Progress</li>
+                <li class="proyect-language">Next.js 15</li>
+                <li class="proyect-language">PostgreSQL</li>
+                <li class="proyect-language">Supabase</li>
+              </ul>
+              <div class="project-actions">
+                <!-- Al ser comercial y de código cerrado, puedes usar un ícono de candado en lugar del link a GitHub -->
+                <span class="btn-icon" title="Proprietary Code">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="3"
+                      y="11"
+                      width="18"
+                      height="11"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+              </div>
             </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-            <div class="sector-title">
-                <div class="line"></div>
-                <h2>Selected Projects</h2>
-                <div class="line"></div>
+            <div class="project-description">
+              <h3>GLOO App</h3>
+              <p class="project-description-text">
+                Building a mobile-first social nightlife app designed to connect
+                groups through a Tinder-style discovery experience. The platform
+                features a vertical snap-scroll carousel, an interactive
+                real-time Leaflet map for live pre-parties, and built-in
+                interactive party games. Developed with Next.js 15, a PostgreSQL
+                database, and Supabase WebSockets for instant matching and live
+                map updates.
+              </p>
             </div>
-
-            <div id="projects-grid">
-
-                <!-- Project 1: Finance Tracker App (REPLACED) -->
-                <div class="project-container reveal" id="project1-container">
-                    <div class="project-header">
-                        <ul>
-                            <li class="proyect-language wip-badge">In Progress</li>
-                            <li class="proyect-language">Spring Boot</li>
-                            <li class="proyect-language">PostgreSQL</li>
-                            <li class="proyect-language">Redis</li>
-                        </ul>
-                        <div class="project-actions">
-                            <a href="https://github.com/alexricardo02/finance-tracker-backend.git" target="_blank"
-                                class="btn-icon" title="View Code">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h3>Finance Tracker App</h3>
-                        <p class="project-description-text">
-A production-grade REST API for personal finance tracking engineered with Spring Boot and PostgreSQL to master advanced system design. Designed for enterprise reliability, it features JWT with rotating refresh tokens, Redis-backed caching, Bucket4j rate limiting, RabbitMQ async recalculation, and Resilience4j circuit breakers.                    </div>
-                    <div class="project-fotos">
-                        <img class="single-project-foto" src="./finance-tracker.png" alt="Finance Tracker App"
-                            id="finance-foto">
-                    </div>
-                </div>
-
-                <!-- Project 2: DIY Drone -->
-                <div class="project-container reveal" id="project2-container">
-                    <div class="project-header">
-                        <ul>
-                            <li class="proyect-language wip-badge">In Progress</li>
-                            <li class="proyect-language">Mission Planner</li>
-                            <li class="proyect-language">Electronics</li>
-                        </ul>
-                        <div class="project-actions">
-                            <a href="https://github.com/alexricardo02/DIY-Drone-Project.git" target="_blank"
-                                class="btn-icon" title="View Code">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h3>DIY-Drone</h3>
-                        <p class="project-description-text">
-                            Developing an autonomous FPV-hybrid UAV built on a carbon fiber racing chassis using a
-                            Pixhawk controller and ArduPilot. Currently optimizing flight stability through custom PID
-                            tuning and log analysis, with real-time telemetry and Raspberry Pi companion computer
-                            integration in progress.
-                        </p>
-                    </div>
-                    <div class="project-fotos">
-                        <img class="single-project-foto" src="./dron.png" alt="DIY Drone" id="dron-foto">
-                    </div>
-                </div>
-
-                <!-- Project 3: Criminal Statistics -->
-                <div class="project-container reveal" id="project3-container">
-                    <div class="project-header">
-                        <ul>
-                            <li class="proyect-language">PHP</li>
-                            <li class="proyect-language">MySQL</li>
-                            <li class="proyect-language">JS</li>
-                        </ul>
-                        <div class="project-actions">
-                            <a href="https://github.com/alexricardo02/webtechnologien-pm-a-team-9.git" target="_blank"
-                                class="btn-icon" title="View Code">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h3>Criminal Statistics Web Dashboard</h3>
-                        <p class="project-description-text">
-                            Collaborative SCRUM project featuring interactive data visualization with a robust
-                            real-time MySQL database architecture, seamlessly integrated with an interactive backend
-                            for processing large datasets efficiently.
-                        </p>
-                    </div>
-                    <div class="project-fotos">
-                        <img class="single-project-foto" src="./dashboard.png" alt="Criminal Statistics Dashboard"
-                            id="accident-foto">
-                    </div>
-                </div>
-
-                <!-- Project 4: Iron Fly -->
-                <div class="project-container reveal" id="project4-container">
-                    <div class="project-header">
-                        <ul>
-                            <li class="proyect-language">Python</li>
-                            <li class="proyect-language">Git</li>
-                        </ul>
-                        <div class="project-actions">
-                            <a href="https://github.com/alexricardo02/Iron-Fly-Game.git" target="_blank"
-                                class="btn-icon" title="View Code">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h3>Iron-Fly 2D Game</h3>
-                        <p class="project-description-text">
-                            Awarded 1st place out of 24 projects at JGU Mainz.
-                            Built with Python and PyGame, applying OOP principles to engineer complex game logic,
-                            physics, and graphical interfaces.
-                        </p>
-                    </div>
-                    <div class="project-fotos">
-                        <img class="single-project-foto" src="./ironfly1.png" alt="Iron Fly Game" id="game-foto">
-                    </div>
-                </div>
-
-                <div class="project-container reveal extra-project" id="gloo-container" style="display: none;">
-                    <div class="project-header">
-                        <ul>
-                            <li class="proyect-language wip-badge">In Progress</li>
-                            <li class="proyect-language">Next.js 15</li>
-                            <li class="proyect-language">PostgreSQL</li>
-                            <li class="proyect-language">Supabase</li>
-                        </ul>
-                        <div class="project-actions">
-                            <!-- Al ser comercial y de código cerrado, puedes usar un ícono de candado en lugar del link a GitHub -->
-                            <span class="btn-icon" title="Proprietary Code">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h3>GLOO App</h3>
-                        <p class="project-description-text">
-                            Building a mobile-first social nightlife app designed to connect groups through a
-                            Tinder-style discovery experience. The platform features a vertical snap-scroll carousel, an
-                            interactive real-time Leaflet map for live pre-parties, and built-in interactive party
-                            games. Developed with Next.js 15, a PostgreSQL database, and Supabase WebSockets
-                            for instant matching and live map updates.
-                        </p>
-                    </div>
-                    <div class="project-fotos">
-                        <img class="single-project-foto" src="gloo.png" alt="GLOO App">
-                    </div>
-                </div>
-
+            <div class="project-fotos">
+              <img class="single-project-foto" src="gloo.png" alt="GLOO App" />
             </div>
+          </div>
+        </div>
 
-            <div style="text-align: center; margin-top: 40px; width: 100%;">
-                <button id="load-more-btn" class="load-more-btn">More Projects</button>
-            </div>
+        <div style="text-align: center; margin-top: 40px; width: 100%">
+          <button id="load-more-btn" class="load-more-btn">
+            More Projects
+          </button>
+        </div>
+      </section>
 
-        </section>
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="sector-title">
+          <div class="line"></div>
+          <h2>Experience</h2>
+          <div class="line"></div>
+        </div>
 
-        <!-- EXPERIENCE -->
-        <section id="experience">
-            <div class="sector-title">
-                <div class="line"></div>
-                <h2>Experience</h2>
-                <div class="line"></div>
-            </div>
-
-            <div id="timeline">
-                <ul>
-                    <li class="timeline-item reveal">
-                        <div class="timeline-content">
-                            <div class="exp-header">
-                                <h3>Board Member — Finance</h3>
-                                <span class="exp-date">Dec 2025 – Present</span>
-                            </div>
-                            <p class="exp-location"><i>INTER MAINZ e.V., Germany</i></p>
-                            <ul class="exp-bullets">
-                                <li>Responsible for financial administration and budget planning of the association.
-                                </li>
-                                <li>Conducted annual financial analysis and developed an interactive dashboard to
-                                    transparently display the association's finances.</li>
-                            </ul>
-                            <div class="exp-tech-stack">
-                                <span class="tech-badge">Finance</span>
-                                <span class="tech-badge">Data Visualization</span>
-                                <span class="tech-badge">Management</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-content">
-                            <div class="exp-header">
-                                <h3>Teaching Assistant — Data Analytics</h3>
-                                <span class="exp-date">Feb 2024 – Present</span>
-                            </div>
-                            <p class="exp-location"><a href="https://datasmartpoint.com/" target="_blank"><i>DataSmart
-                                        Point GmbH, Germany</i></a></p>
-                            <ul class="exp-bullets">
-                                <li>Mentored students in data analysis methodologies using <strong>Excel, SQL, and Power
-                                        BI</strong>.</li>
-                                <li>Provided technical support for Python scripting and database management.</li>
-                                <li>Coordinated the evaluation of final capstone projects, ensuring code quality and
-                                    analytical depth.</li>
-                            </ul>
-                            <div class="exp-tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">SQL</span>
-                                <span class="tech-badge">Power BI</span>
-                                <span class="tech-badge">Excel</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-content">
-                            <div class="exp-header">
-                                <h3>B.Sc. Applied Computer Science</h3>
-                                <span class="exp-date">2024 – Present</span>
-                            </div>
-                            <p class="exp-location"><a href="https://www.hs-mainz.de/" target="_blank"><i>Mainz
-                                        University of Applied Sciences, Germany</i></a></p>
-                            <p class="exp-description">Focus on software engineering, database systems, and applied AI.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-content">
-                            <div class="exp-header">
-                                <h3>Computer Science Internship</h3>
-                                <span class="exp-date">Sep 2022</span>
-                            </div>
-                            <p class="exp-location"><a href="https://www.uni-mainz.de/" target="_blank"><i>Johannes
-                                        Gutenberg University Mainz, Germany</i></a></p>
-                            <ul class="exp-bullets">
-                                <li>Spearheaded the development of a Python-based arcade game using the
-                                    <strong>Pygame</strong> library.</li>
-                                <li>Implemented OOP principles to structure game logic and physics.</li>
-                                <li>Collaborated in an agile team environment to meet strict development deadlines.</li>
-                            </ul>
-                            <div class="exp-tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Pygame</span>
-                                <span class="tech-badge">Git</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-content">
-                            <div class="exp-header">
-                                <h3>B.Sc. Informatik (Computer Science)</h3>
-                                <span class="exp-date">2022 – 2024</span>
-                            </div>
-                            <p class="exp-location"><a href="https://www.uni-mainz.de/" target="_blank"><i>Johannes
-                                        Gutenberg University Mainz, Germany</i></a></p>
-                            <p class="exp-description">Foundational studies in algorithms, data structures, and
-                                mathematics.</p>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-content">
-                            <div class="exp-header">
-                                <h3>International Trilingual Baccalaureate</h3>
-                                <span class="exp-date">2020</span>
-                            </div>
-                            <p class="exp-location"><a href="https://iballester.edu.ar/" target="_blank"><i>Instituto
-                                        Ballester, Argentina</i></a></p>
-                            <p class="exp-description">Specialization in Natural Sciences. Acquired C1 German (DSD II).
-                            </p>
-                        </div>
-                    </li>
+        <div id="timeline">
+          <ul>
+            <li class="timeline-item reveal">
+              <div class="timeline-content">
+                <div class="exp-header">
+                  <h3>Board Member — Finance</h3>
+                  <span class="exp-date">Dec 2025 – Present</span>
+                </div>
+                <p class="exp-location"><i>INTER MAINZ e.V., Germany</i></p>
+                <ul class="exp-bullets">
+                  <li>
+                    Responsible for financial administration and budget planning
+                    of the association.
+                  </li>
+                  <li>
+                    Conducted annual financial analysis and developed an
+                    interactive dashboard to transparently display the
+                    association's finances.
+                  </li>
                 </ul>
-            </div>
-        </section>
+                <div class="exp-tech-stack">
+                  <span class="tech-badge">Finance</span>
+                  <span class="tech-badge">Data Visualization</span>
+                  <span class="tech-badge">Management</span>
+                </div>
+              </div>
+            </li>
 
-        <!-- CONTACT -->
-        <section id="contact">
-            <div class="sector-title">
-                <div class="line"></div>
-                <h2>Contact me</h2>
-                <div class="line"></div>
-            </div>
+            <li class="timeline-item reveal">
+              <div class="timeline-content">
+                <div class="exp-header">
+                  <h3>Teaching Assistant — Data Analytics</h3>
+                  <span class="exp-date">Feb 2024 – Present</span>
+                </div>
+                <p class="exp-location">
+                  <a href="https://datasmartpoint.com/" target="_blank"
+                    ><i>DataSmart Point GmbH, Germany</i></a
+                  >
+                </p>
+                <ul class="exp-bullets">
+                  <li>
+                    Mentored students in data analysis methodologies using
+                    <strong>Excel, SQL, and Power BI</strong>.
+                  </li>
+                  <li>
+                    Provided technical support for Python scripting and database
+                    management.
+                  </li>
+                  <li>
+                    Coordinated the evaluation of final capstone projects,
+                    ensuring code quality and analytical depth.
+                  </li>
+                </ul>
+                <div class="exp-tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">SQL</span>
+                  <span class="tech-badge">Power BI</span>
+                  <span class="tech-badge">Excel</span>
+                </div>
+              </div>
+            </li>
 
-            <div id="contact-content">
-                <a href="mailto:brinckmannalex@gmail.com" title="Send an email">
-                    brinckmannalex@gmail.com
-                </a>
-                <button id="copy-button" onclick="copiarCorreo()" title="Copy email">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M5.503 4.627 5.5 6.75v10.504a3.25 3.25 0 0 0 3.25 3.25h8.616a2.251 2.251 0 0 1-2.122 1.5H8.75A4.75 4.75 0 0 1 4 17.254V6.75c0-.98.627-1.815 1.503-2.123ZM17.75 2A2.25 2.25 0 0 1 20 4.25v13a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-13A2.25 2.25 0 0 1 8.75 2h9Z"
-                            fill="currentColor" />
-                    </svg>
-                </button>
-            </div>
-            <div id="mensaje-copiado">✓ Email copied!</div>
-        </section>
+            <li class="timeline-item reveal">
+              <div class="timeline-content">
+                <div class="exp-header">
+                  <h3>B.Sc. Applied Computer Science</h3>
+                  <span class="exp-date">2024 – Present</span>
+                </div>
+                <p class="exp-location">
+                  <a href="https://www.hs-mainz.de/" target="_blank"
+                    ><i>Mainz University of Applied Sciences, Germany</i></a
+                  >
+                </p>
+                <p class="exp-description">
+                  Focus on software engineering, database systems, and applied
+                  AI.
+                </p>
+              </div>
+            </li>
 
-        <footer id="footer">
-            <span id="copyright-text">© 2026 Alex Brinckmann. All rights reserved.</span>
-        </footer>
+            <li class="timeline-item reveal">
+              <div class="timeline-content">
+                <div class="exp-header">
+                  <h3>Computer Science Internship</h3>
+                  <span class="exp-date">Sep 2022</span>
+                </div>
+                <p class="exp-location">
+                  <a href="https://www.uni-mainz.de/" target="_blank"
+                    ><i>Johannes Gutenberg University Mainz, Germany</i></a
+                  >
+                </p>
+                <ul class="exp-bullets">
+                  <li>
+                    Spearheaded the development of a Python-based arcade game
+                    using the <strong>Pygame</strong> library.
+                  </li>
+                  <li>
+                    Implemented OOP principles to structure game logic and
+                    physics.
+                  </li>
+                  <li>
+                    Collaborated in an agile team environment to meet strict
+                    development deadlines.
+                  </li>
+                </ul>
+                <div class="exp-tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Pygame</span>
+                  <span class="tech-badge">Git</span>
+                </div>
+              </div>
+            </li>
 
+            <li class="timeline-item reveal">
+              <div class="timeline-content">
+                <div class="exp-header">
+                  <h3>B.Sc. Informatik (Computer Science)</h3>
+                  <span class="exp-date">2022 – 2024</span>
+                </div>
+                <p class="exp-location">
+                  <a href="https://www.uni-mainz.de/" target="_blank"
+                    ><i>Johannes Gutenberg University Mainz, Germany</i></a
+                  >
+                </p>
+                <p class="exp-description">
+                  Foundational studies in algorithms, data structures, and
+                  mathematics.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-content">
+                <div class="exp-header">
+                  <h3>International Trilingual Baccalaureate</h3>
+                  <span class="exp-date">2020</span>
+                </div>
+                <p class="exp-location">
+                  <a href="https://iballester.edu.ar/" target="_blank"
+                    ><i>Instituto Ballester, Argentina</i></a
+                  >
+                </p>
+                <p class="exp-description">
+                  Specialization in Natural Sciences. Acquired C1 German (DSD
+                  II).
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="sector-title">
+          <div class="line"></div>
+          <h2>Contact me</h2>
+          <div class="line"></div>
+        </div>
+
+        <div id="contact-content">
+          <a href="mailto:brinckmannalex@gmail.com" title="Send an email">
+            brinckmannalex@gmail.com
+          </a>
+          <button id="copy-button" onclick="copiarCorreo()" title="Copy email">
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.503 4.627 5.5 6.75v10.504a3.25 3.25 0 0 0 3.25 3.25h8.616a2.251 2.251 0 0 1-2.122 1.5H8.75A4.75 4.75 0 0 1 4 17.254V6.75c0-.98.627-1.815 1.503-2.123ZM17.75 2A2.25 2.25 0 0 1 20 4.25v13a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-13A2.25 2.25 0 0 1 8.75 2h9Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <div id="mensaje-copiado">✓ Email copied!</div>
+      </section>
+
+      <footer id="footer">
+        <span id="copyright-text"
+          >© 2026 Alex Brinckmann. All rights reserved.</span
+        >
+      </footer>
     </div>
 
     <script src="./menu.js"></script>
-</body>
-
+  </body>
 </html>

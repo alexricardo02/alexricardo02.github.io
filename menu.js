@@ -5,10 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadMoreBtn = document.getElementById('load-more-btn');
     const extraProjects = document.querySelectorAll('.extra-project');
 
+    
+
     const toggleMenu = () => {
         if (mediaQuery.matches) {
             navText.classList.toggle('active');
         }
+        menuToggle.setAttribute('aria-expanded', navText.classList.contains('active'));
     };
 
     if (menuToggle && navText) {
