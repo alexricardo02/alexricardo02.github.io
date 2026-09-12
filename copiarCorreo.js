@@ -1,17 +1,22 @@
+let copyTimeout;
+
 function copiarCorreo() {
     const correo = "brinckmannalex@gmail.com";
-    
-    // Copia el correo al portapapeles
-    navigator.clipboard.writeText(correo).then(() => {
-      // Mostrar mensaje de confirmación
-      const mensaje = document.getElementById("mensaje-copiado");
-      mensaje.style.display = "block";
+    const mensaje = document.getElementById("mensaje-copiado");
 
-      // Ocultar el mensaje después de 3 segundos
-      setTimeout(() => {
-        mensaje.style.display = "none";
-      }, 3000);
+    navigator.clipboard.writeText(correo).then(() => {
+        if (!mensaje) return;
+
+        mensaje.classList.add("visible");
+
+        if (copyTimeout) {
+            clearTimeout(copyTimeout);
+        }
+
+        copyTimeout = setTimeout(() => {
+            mensaje.classList.remove("visible");
+        }, 3000);
     }).catch(err => {
-      console.error("Error al copiar el correo: ", err);
+        console.error("Error al copiar el correo: ", err);
     });
 }

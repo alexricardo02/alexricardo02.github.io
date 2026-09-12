@@ -12,8 +12,14 @@
 
 <body>
   <header id="header">
-    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-    <nav id="nav-bar">
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-text">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <nav id="nav-bar" aria-label="Main navigation">
       <ul id="nav-text">
         <li><a href="#presentation">Home</a></li>
         <li><a href="#about-me">About me</a></li>
@@ -45,10 +51,10 @@
       </div>
 
       <div id="github-linkedin">
-        <a href="https://github.com/alexricardo02" target="_blank" title="GitHub">
+        <a href="https://github.com/alexricardo02" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub Profile">
           <i class="devicon-github-original"></i>
         </a>
-        <a href="https://www.linkedin.com/in/alex-brinckmann-6762b6203/" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/alex-brinckmann-6762b6203/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn Profile">
           <i class="devicon-linkedin-plain"></i>
         </a>
       </div>
@@ -109,8 +115,7 @@
           <i class="devicon-html5-plain-wordmark technology-icon"></i>
         </div>
         <div class="technology-container" title="CSS3">
-          <img src="https://img.icons8.com/?size=100&id=11594&format=png&color=000000" alt="CSS3" id="css3-icon"
-            width="50" height="50" />
+          <i class="devicon-css3-plain-wordmark technology-icon"></i>
         </div>
       </div>
 
@@ -146,15 +151,13 @@
           <i class="devicon-git-plain-wordmark technology-icon"></i>
         </div>
         <div class="technology-container" title="Excel">
-          <img src="https://img.icons8.com/?size=100&id=11594&format=png&color=000000" alt="Excel" id="excel-icon"
-            width="50" height="50" />
+          <svg class="technology-icon-svg" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.17 3.25Q21.5 3.25 21.76 3.5 22 3.74 22 4.08V19.92Q22 20.26 21.76 20.5 21.5 20.75 21.17 20.75H7.83Q7.5 20.75 7.24 20.5 7 20.26 7 19.92V17H2.83Q2.5 17 2.24 16.76 2 16.5 2 16.17V7.83Q2 7.5 2.24 7.24 2.5 7 2.83 7H7V4.08Q7 3.74 7.24 3.5 7.5 3.25 7.83 3.25M7 15.5V8.5H3.5V15.5M9.5 5.5V7H11.75V8.5H9.5V10H12.5V11.5H9.5V13H13.25V14.5H9.5V16H14V17.5H9.5V18.5H20.5V5.5M4.42 9.5H5.42L6.1 11.23L6.77 9.5H7.77L6.68 12L7.77 14.5H6.77L6.1 12.77L5.42 14.5H4.42L5.51 12Z"/>
+          </svg>
         </div>
         <div class="technology-container" title="Power BI">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"
-            style="fill: #1a1a2e" id="powerbi-icon">
-            <path
-              d="M 27.5 1 C 26.122 1 25 2.122 25 3.5 L 25 10 L 31.5 10 C 33.981 10 36 12.019 36 14.5 L 36 49 L 40.5 49 C 41.878 49 43 47.879 43 46.5 L 43 3.5 C 43 2.122 41.878 1 40.5 1 L 27.5 1 z M 18.5 12 C 17.122 12 16 13.122 16 14.5 L 16 20 L 22.5 20 C 24.981 20 27 22.019 27 24.5 L 27 49 L 31.5 49 C 32.878 49 34 47.879 34 46.5 L 34 14.5 C 34 13.122 32.878 12 31.5 12 L 18.5 12 z M 9.5 22 C 8.122 22 7 23.122 7 24.5 L 7 46.5 C 7 47.879 8.122 49 9.5 49 L 22.5 49 C 23.878 49 25 47.879 25 46.5 L 25 24.5 C 25 23.122 23.878 22 22.5 22 L 9.5 22 z">
-            </path>
+          <svg class="technology-icon-svg" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="currentColor">
+            <path d="M 27.5 1 C 26.122 1 25 2.122 25 3.5 L 25 10 L 31.5 10 C 33.981 10 36 12.019 36 14.5 L 36 49 L 40.5 49 C 41.878 49 43 47.879 43 46.5 L 43 3.5 C 43 2.122 41.878 1 40.5 1 L 27.5 1 z M 18.5 12 C 17.122 12 16 13.122 16 14.5 L 16 20 L 22.5 20 C 24.981 20 27 22.019 27 24.5 L 27 49 L 31.5 49 C 32.878 49 34 47.879 34 46.5 L 34 14.5 C 34 13.122 32.878 12 31.5 12 L 18.5 12 z M 9.5 22 C 8.122 22 7 23.122 7 24.5 L 7 46.5 C 7 47.879 8.122 49 9.5 49 L 22.5 49 C 23.878 49 25 47.879 25 46.5 L 25 24.5 C 25 23.122 23.878 22 22.5 22 L 9.5 22 z"/>
           </svg>
         </div>
       </div>
@@ -180,8 +183,8 @@
             </ul>
             <div class="project-actions">
 
-              <a href="https://expenses-incomes-frontend.vercel.app/" target="_blank" class="btn-icon"
-                title="View Live App">
+              <a href="https://expenses-incomes-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Live App" aria-label="View Live App">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -189,8 +192,8 @@
                   <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
               </a>
-              <a href="https://github.com/alexricardo02/finance-tracker-backend.git" target="_blank" class="btn-icon"
-                title="View Code">
+              <a href="https://github.com/alexricardo02/finance-tracker-backend.git" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Code" aria-label="View Code on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path
@@ -225,8 +228,8 @@
               <li class="proyect-language">Electronics</li>
             </ul>
             <div class="project-actions">
-              <a href="https://github.com/alexricardo02/DIY-Drone-Project.git" target="_blank" class="btn-icon"
-                title="View Code">
+              <a href="https://github.com/alexricardo02/DIY-Drone-Project.git" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Code" aria-label="View Code on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path
@@ -261,8 +264,8 @@
               <li class="proyect-language">Microservices</li>
             </ul>
             <div class="project-actions">
-              <a href="https://github.com/alexricardo02/safe-street-backend.git" target="_blank" class="btn-icon"
-                title="View Code">
+              <a href="https://github.com/alexricardo02/safe-street-backend.git" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Code" aria-label="View Code on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path
@@ -298,8 +301,8 @@
               <li class="proyect-language">Arduino</li>
             </ul>
             <div class="project-actions">
-              <a href="https://github.com/alexricardo02/Sailboat-IoT-Telemetry-Station.git" target="_blank" class="btn-icon"
-                title="View Code">
+              <a href="https://github.com/alexricardo02/Sailboat-IoT-Telemetry-Station.git" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Code" aria-label="View Code on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path
@@ -328,8 +331,8 @@
               <li class="proyect-language">Git</li>
             </ul>
             <div class="project-actions">
-              <a href="https://github.com/alexricardo02/Iron-Fly-Game.git" target="_blank" class="btn-icon"
-                title="View Code">
+              <a href="https://github.com/alexricardo02/Iron-Fly-Game.git" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Code" aria-label="View Code on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path
@@ -361,8 +364,8 @@
               <li class="proyect-language">JavaScript</li>
             </ul>
             <div class="project-actions">
-              <a href="https://intermainz.de/" target="_blank" class="btn-icon"
-                title="View Live Website">
+              <a href="https://intermainz.de/" target="_blank" rel="noopener noreferrer" class="btn-icon"
+                title="View Live Website" aria-label="View Live Website">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -397,8 +400,7 @@
               <li class="proyect-language">Supabase</li>
             </ul>
             <div class="project-actions">
-              <!-- Al ser comercial y de código cerrado, puedes usar un ícono de candado en lugar del link a GitHub -->
-              <span class="btn-icon" title="Proprietary Code">
+              <span class="btn-icon" title="Proprietary Code" aria-label="Proprietary Code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
@@ -427,7 +429,7 @@
       </div>
 
       <div class="load-more-wrapper">
-        <button id="load-more-btn" class="load-more-btn">
+        <button id="load-more-btn" class="load-more-btn" aria-label="Load more projects">
           More Projects
         </button>
       </div>
@@ -476,7 +478,7 @@
                 <span class="exp-date">Feb 2024 – Present</span>
               </div>
               <p class="exp-location">
-                <a href="https://datasmartpoint.com/" target="_blank"><i>DataSmart Point GmbH, Germany</i></a>
+                <a href="https://datasmartpoint.com/" target="_blank" rel="noopener noreferrer"><i>DataSmart Point GmbH, Germany</i></a>
               </p>
               <ul class="exp-bullets">
                 <li>
@@ -508,7 +510,7 @@
                 <span class="exp-date">2024 – Present</span>
               </div>
               <p class="exp-location">
-                <a href="https://www.hs-mainz.de/" target="_blank"><i>Mainz University of Applied Sciences,
+                <a href="https://www.hs-mainz.de/" target="_blank" rel="noopener noreferrer"><i>Mainz University of Applied Sciences,
                     Germany</i></a>
               </p>
               <p class="exp-description">
@@ -525,7 +527,7 @@
                 <span class="exp-date">Sep 2022</span>
               </div>
               <p class="exp-location">
-                <a href="https://www.uni-mainz.de/" target="_blank"><i>Johannes Gutenberg University Mainz,
+                <a href="https://www.uni-mainz.de/" target="_blank" rel="noopener noreferrer"><i>Johannes Gutenberg University Mainz,
                     Germany</i></a>
               </p>
               <ul class="exp-bullets">
@@ -557,7 +559,7 @@
                 <span class="exp-date">2022 – 2024</span>
               </div>
               <p class="exp-location">
-                <a href="https://www.uni-mainz.de/" target="_blank"><i>Johannes Gutenberg University Mainz,
+                <a href="https://www.uni-mainz.de/" target="_blank" rel="noopener noreferrer"><i>Johannes Gutenberg University Mainz,
                     Germany</i></a>
               </p>
               <p class="exp-description">
@@ -574,7 +576,7 @@
                 <span class="exp-date">2020</span>
               </div>
               <p class="exp-location">
-                <a href="https://iballester.edu.ar/" target="_blank"><i>Instituto Ballester, Argentina</i></a>
+                <a href="https://iballester.edu.ar/" target="_blank" rel="noopener noreferrer"><i>Instituto Ballester, Argentina</i></a>
               </p>
               <p class="exp-description">
                 Specialization in Natural Sciences. Acquired C1 German (DSD
@@ -595,10 +597,10 @@
       </div>
 
       <div id="contact-content">
-        <a href="mailto:brinckmannalex@gmail.com" title="Send an email">
+        <a href="mailto:brinckmannalex@gmail.com" title="Send an email" class="email-link">
           brinckmannalex@gmail.com
         </a>
-        <button id="copy-button" onclick="copiarCorreo()" title="Copy email">
+        <button id="copy-button" onclick="copiarCorreo()" title="Copy email" aria-label="Copy email address">
           <svg width="18" height="18" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5.503 4.627 5.5 6.75v10.504a3.25 3.25 0 0 0 3.25 3.25h8.616a2.251 2.251 0 0 1-2.122 1.5H8.75A4.75 4.75 0 0 1 4 17.254V6.75c0-.98.627-1.815 1.503-2.123ZM17.75 2A2.25 2.25 0 0 1 20 4.25v13a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-13A2.25 2.25 0 0 1 8.75 2h9Z"
@@ -606,7 +608,12 @@
           </svg>
         </button>
       </div>
-      <div id="mensaje-copiado">✓ Email copied!</div>
+      <div id="mensaje-copiado" role="status" aria-live="polite">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Email copied!</span>
+      </div>
     </section>
 
     <footer id="footer">

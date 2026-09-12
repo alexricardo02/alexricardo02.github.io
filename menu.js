@@ -1,48 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navText = document.querySelector('#nav-text');
-    const mediaQuery = window.matchMedia("(max-width: 431px)"); 
     const loadMoreBtn = document.getElementById('load-more-btn');
     const extraProjects = document.querySelectorAll('.extra-project');
 
-    
+    // ===== MOBILE MENU ACCESSIBILITY & SYNC =====
+    const closeMenu = () => {
+        if (navText && navText.classList.contains('active')) {
+            navText.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+    };
 
     const toggleMenu = () => {
-        if (mediaQuery.matches) {
-            navText.classList.toggle('active');
-        }
-        menuToggle.setAttribute('aria-expanded', navText.classList.contains('active'));
+        if (!navText || !menuToggle) return;
+        const isActive = navText.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     };
 
     if (menuToggle && navText) {
-        menuToggle.addEventListener('click', toggleMenu);
-    } else {
-        console.error('Error: No se encontraron el botón o el menú en el DOM.');
-    }
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
 
-    // ===== SCROLL REVEAL =====
-    const revealElements = document.querySelectorAll('.reveal');
+        // Close when clicking any nav link
+        navText.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
+        // Close when clicking outside header
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#header')) {
+                closeMenu();
             }
         });
-    }, { threshold: 0.15 });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    }
 
-    if(loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', () => {
-            extraProjects.forEach(project => {
-                project.style.display = 'flex';
-                setTimeout(() => project.classList.add('visible'), 50); 
+    // ===== SCROLL REVEAL (WITH PREFERS-REDUCED-MOTION SUPPORT) =====
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if (prefersReducedMotion) {
+        revealElements.forEach((el) => el.classList.add('visible'));
+    } else {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
             });
-            loadMoreBtn.style.display = 'none'; 
+        }, { threshold: 0.12 });
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+    }
+
+    // ===== LOAD MORE PROJECTS =====
+    if (loadMoreBtn && extraProjects.length > 0) {
+        loadMoreBtn.addEventListener('click', () => {
+            extraProjects.forEach((project, idx) => {
+                project.style.display = 'flex';
+                // Trigger reflow for transition
+                requestAnimationFrame(() => {
+                    setTimeout(() => {
+                        project.classList.add('visible');
+                    }, idx * 60);
+                });
+            });
+            loadMoreBtn.style.display = 'none';
         });
     }
 });
-
-
